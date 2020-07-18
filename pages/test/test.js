@@ -1,0 +1,79 @@
+// pages/test/test.js
+Page({
+
+  data: {
+      message:'nihao',
+      condition: true,
+      str:"你好，我是wbh",
+      arr:[1,2,3,4],
+      obj:{id:1,text:'信息1'},
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+  reverseStr(){
+    this.setData({str: this.data.str.split('').reverse().join('') })
+  },
+  push(){
+    let lastItem = this.data.arr[this.data.arr.length-1]
+    let newItem = [lastItem + 1]
+    this.data.arr = this.data.arr.concat(newItem )
+    this.setData({arr: this.data.arr})
+  },
+  changeObj(){
+    this.data.obj.text = "信息2"
+    this.setData({obj:this.data.obj})
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})
