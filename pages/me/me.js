@@ -1,31 +1,44 @@
-// const { http } = require('../../lib/http.js');
+const {
+  http
+} = require("../../lib/http")
 
 Page({
   data: {
-    tab: "tomato",
+    tab: 'tomato',
     tomatoes: {},
     todos: {},
-    me: {}
+    my: {}
   },
   onShow: function () {
-    this.fetchTomatoes()
     this.fetchTodos()
-    this.setData({me: wx.getStorageSync('me')})
+    this.fetchTomatoes()
+    this.setData({
+      my: wx.getStorageSync('my')
+    })
+
   },
-  fetchTomatoes(){
-    http.get('/tomatoes', { is_group: "yes" })
-    .then(response => {
-      this.setData({ tomatoes: response.data.resources })
+  fetchTomatoes() {
+    http.get('/tomatoes', {
+      is_group: "yes"
+    }).then(response => {
+      this.setData({
+        tomatoes: response.data.resources
+      })
     })
   },
-  fetchTodos(){
-    http.get('/todos', { is_group: "yes" })
-    .then(response => {
-      this.setData({ todos: response.data.resources })
+  fetchTodos() {
+    http.get('/todos', {
+      is_group: "yes"
+    }).then(response => {
+      this.setData({
+        todos: response.data.resources
+      })
     })
   },
-  changeTab(event){
+  changeTab(event) {
     let name = event.currentTarget.dataset.name
-    this.setData({ tab: name })
+    this.setData({
+      tab: name
+    })
   }
 })

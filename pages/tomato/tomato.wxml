@@ -18,5 +18,5 @@
 	</view>
 	<t-confirm visible="{{confirmVisible}}" bindconfirm="confirmAbandon" bindcancel="hideConfirm" placeholder="确认要放弃吗？"></t-confirm>
 
-	<t-confirm visible="{{finishConfirmVisible}}" bindconfirm="confirmFinish" bindcancel="confirmCancel" placeholder="完成了什么任务？"></t-confirm>
+  <t-confirm visible="{{finishConfirmVisible}}" bindconfirm="confirmFinish" bindcancel="confirmCancel" placeholder="完成了什么"></t-confirm>
 </view>

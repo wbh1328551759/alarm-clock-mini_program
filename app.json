@@ -1,45 +1,36 @@
 {
-  "pages":[
+  "pages": [
     "pages/login/login",
-    "pages/binding/binding",
-
     "pages/me/me",
     "pages/home/home",
-    "pages/tomato/tomato",
-    "pages/test/test"
+    "pages/binding/binding",
+    "pages/tomato/tomato"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "番茄闹钟",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "wbh西瓜闹钟",
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
+  "tabBar": {
     "color": "#515151",
     "selectedColor": "#F6705A",
     "backgroundColor": "#fff",
     "borderStyle": "black",
-    "list":[
+    "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "专注",
+        "text": "西瓜闹钟",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home-active.png"
       },
       {
-        "pagePath": "pages/home/home",
-        "text": "数据统计",
-        "iconPath": "images/total.png",
-        "selectedIconPath": "images/total-active.png"
-      },
-      {
-        "pagePath": "pages/test/test",
-        "text": "我的",
+        "pagePath": "pages/me/me",
+        "text": "我的任务",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-active.png"
       }
     ]
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap23.json"
 }

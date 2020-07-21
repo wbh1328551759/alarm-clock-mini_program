@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
 }
 
 .tomato-wrapper {
+  overflow: hidden;
   flex: 1;
   margin-top: 66rpx;
   padding: 0 28rpx;
